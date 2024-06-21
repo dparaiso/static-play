@@ -18,23 +18,10 @@
 
   /* carousel testing */
 
-body {
-  background-color: #8c52ff;
-  height: 600px;
-  margin: 0;
-  display: grid;
-  grid-template-rows: 500px 100px;
-  grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr;
-  align-items: center;
-  justify-items: center;
-  font-family: 'Poppins', sans-serif;
-}
-
 .item img {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
-  margin-top: 15px;
 }
 
 main#carousel {
@@ -47,22 +34,22 @@ main#carousel {
   justify-content: center;
   overflow: hidden;
   transform-style: preserve-3d;
-  perspective: 600px;
-  --items: 5;
-  --middle: 3;
+  perspective: 500px;
+  --items: 3;
+  --middle: 2;
   --position: 1;
   pointer-events: none;
 }
 
 div.item {
   text-align: center;
-  padding: 20px;
+  padding: 10px;
   border: 3px solid black;
-  border-radius: 20px;
+  border-radius: 50%;
   background-color: #fff;
   position: absolute;
-  width: 300px;
-  height: 250px;
+  width: 200px; 
+  height: 200px; 
   background-color: white;
   --r: calc(var(--position) - var(--offset));
   --abs: max(calc(var(--r) * -1), var(--r));
