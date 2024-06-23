@@ -30,7 +30,6 @@
 }
 
 body {
-  overflow: hidden;
   background: var(--bgColor);
   font-family: sans-serif;
   user-select: none;
