@@ -123,7 +123,7 @@ input[type="radio"]:checked {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
 } */
 
-
+/* 
 .first {
   padding: 35px; 
   background-color: #20aae1;
@@ -192,4 +192,67 @@ input[type="radio"]:checked {
   padding-right: calc(var(--bs-gutter-x)* .5);
   padding-left: calc(var(--bs-gutter-x)* .5);
   margin-top: var(--bs-gutter-y);
+} */
+
+
+body {
+  background-color: grey;
+  font-family: "Roboto", sans-serif;
+}
+
+.wrap {
+  display: flex; 
+  flex-flow: row wrap;
+  text-align: center;
+}
+
+.wrap > * {
+  padding: 8px; 
+  margin: 8px; 
+  flex: 1 100%;
+}
+
+.header {
+  height: 100px; 
+  background-color: chocolate;
+}
+
+.main {
+ height: 320px; 
+ background-color: green; 
+}
+
+.side-left {
+  background-color: red;
+}
+
+.side-right { 
+  background-color: blue;
+}
+
+.footer { 
+  height: 100px; 
+  background: palevioletred;
+}
+
+@media all and (min-width: 800px) {
+  /* .main{
+    flex: 3;
+  }
+  .main {
+    order: 2; 
+  }
+  .side-left {
+    order: 1;
+  }
+  .side-right {
+    order: 2; 
+  }
+  .footer {
+    order: 4; 
+  } */
+
+  .side {
+    flex: 1; 
+  }
 }
