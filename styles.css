@@ -1,4 +1,4 @@
-.curved-div {
+/* .curved-div {
   background: #ff3c00;
   color: #FFF;
   text-align: center;
@@ -14,12 +14,12 @@
 
 .curved-div svg {
   display: block; 
-}
+} */
 
   /* carousel testing */
 /* third carousel */
 
-* {
+/* * {
   box-sizing: border-box; 
   margin: 0; 
   padding: 0;
@@ -33,9 +33,9 @@ body {
   background: var(--bgColor);
   font-family: sans-serif;
   user-select: none;
-}
+} */
 
-#slider {
+/* #slider {
   position: relative;
   width: 50%;
   height: 32vw; 
@@ -81,45 +81,115 @@ input[type="radio"]:checked {
   font-weight: bold;
   cursor: pointer; 
   transition: transform 400ms ease; 
-}
+} */
 
 /* Active Slide */
-#s1:checked ~ #slide2,
+/* #s1:checked ~ #slide2,
 #s2:checked ~ #slide3,
 #s3:checked ~ #slide4,
 #s4:checked ~ #slide5,
 #s5:checked ~ #slide1 {
   transform: translate3d(20%, 0, -100px); 
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);
-}
+} */
 
 /* Previous Slide */
-#s1:checked ~ #slide5,
+/* #s1:checked ~ #slide5,
 #s2:checked ~ #slide1,
 #s3:checked ~ #slide2,
 #s4:checked ~ #slide3,
 #s5:checked ~ #slide4 {
   transform: translate3d(-20%, 0, -100px); 
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);
-}
+} */
 
 /* Next to Next Slide */
-#s1:checked ~ #slide3,
+/* #s1:checked ~ #slide3,
 #s2:checked ~ #slide4,
 #s3:checked ~ #slide5,
 #s4:checked ~ #slide1,
 #s5:checked ~ #slide2 {
   transform: translate3d(40%, 0, -250px); 
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
-}
+} */
 
 /* Previous to Previous Slide */
-#s1:checked ~ #slide4,
+/* #s1:checked ~ #slide4,
 #s2:checked ~ #slide5,
 #s3:checked ~ #slide1,
 #s4:checked ~ #slide2,
 #s5:checked ~ #slide3 {
   transform: translate3d(-40%, 0, -250px); 
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+} */
+
+
+.first {
+  padding: 35px; 
+  background-color: #20aae1;
+  margin-bottom: 24px;
 }
 
+.firstA {
+  color: #fff; 
+  background: #1791be; 
+  width: 70px; 
+  height: 70px; 
+  border-radius: 100px;
+  margin: auto; 
+  padding-top: 8px;
+}
+
+.second {
+  padding: 35px; 
+  background-color: #f8b710;
+  margin-bottom: 24px;
+}
+
+.secondB {
+  color: #fff; 
+  background: #e2980c; 
+  width: 70px; 
+  height: 70px; 
+  border-radius: 100px;
+  margin: auto; 
+  padding-top: 8px;
+}
+
+.thire {
+  padding: 35px; 
+  background-color: #2acd72;
+  margin-bottom: 24px; 
+}
+
+.thireC {
+  color: #fff; 
+  background: #1c9652; 
+  width: 70px; 
+  height: 70px; 
+  border-radius: 100px; 
+  margin: auto; 
+  padding-top: 8px;
+}
+
+.four {
+  padding: 15px; 
+  background: #e7e7e7; 
+  margin-bottom: 20px;
+}
+
+.row {
+  --bs-gutter-x: 1.5rem; 
+  --bs-gutter-y: 0; 
+  display: flex; 
+  flex-wrap: wrap; 
+}
+
+.row>* {
+  flex-shrink: 0; 
+  width: 100%; 
+  max-width: 100%; 
+  padding-right: calc(var(--bs-gutter-x)* .5);
+  padding-left: calc(var(--bs-gutter-x)* .5);
+  margin-top: var(--bs-gutter-y);
+}
