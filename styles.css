@@ -1,4 +1,4 @@
-/* .curved-div {
+.curved-div {
   background: #ff3c00;
   color: #FFF;
   text-align: center;
@@ -28,6 +28,7 @@
 
 body {
   background: var(--bgColor);
+  text-align: center;
   font-family: sans-serif;
   user-select: none;
 } 
@@ -78,51 +79,46 @@ input[type="radio"]:checked {
   font-weight: bold;
   cursor: pointer; 
   transition: transform 400ms ease; 
-}  */
+} 
 
 /* Active Slide */
-/* #s1:checked ~ #slide2,
+#s1:checked ~ #slide2,
 #s2:checked ~ #slide3,
 #s3:checked ~ #slide4,
 #s4:checked ~ #slide5,
 #s5:checked ~ #slide1 {
   transform: translate3d(20%, 0, -100px); 
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);
-} */
+}
 
 /* Previous Slide */
-/* #s1:checked ~ #slide5,
+#s1:checked ~ #slide5,
 #s2:checked ~ #slide1,
 #s3:checked ~ #slide2,
 #s4:checked ~ #slide3,
 #s5:checked ~ #slide4 {
   transform: translate3d(-20%, 0, -100px); 
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);
-} */
+}
 
 /* Next to Next Slide */
-/* #s1:checked ~ #slide3,
+#s1:checked ~ #slide3,
 #s2:checked ~ #slide4,
 #s3:checked ~ #slide5,
 #s4:checked ~ #slide1,
 #s5:checked ~ #slide2 {
   transform: translate3d(40%, 0, -250px); 
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
-} */
+}
 
 /* Previous to Previous Slide */
-/* #s1:checked ~ #slide4,
+#s1:checked ~ #slide4,
 #s2:checked ~ #slide5,
 #s3:checked ~ #slide1,
 #s4:checked ~ #slide2,
 #s5:checked ~ #slide3 {
   transform: translate3d(-40%, 0, -250px); 
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
-}
-
-body {
-  background-color: grey;
-  font-family: "Roboto", sans-serif;
 }
 
 .wrap {
@@ -158,9 +154,9 @@ body {
 .footer { 
   height: 100px; 
   background: palevioletred;
-} */
+}
 
-/* @media all and (min-width: 800px) { */
+@media all and (min-width: 800px) {
   /* .main{
     flex: 3;
   }
@@ -177,18 +173,13 @@ body {
     order: 4; 
   } */
 
-  /* .side {
+  .side {
     flex: 1; 
   }
-} */
-
-* {
-  box-sizing: border-box; 
-  padding: 0; 
-  margin: 0; 
 }
 
-body {
+
+/* body {
   max-width: 65vw;
   min-height: 100vh;
   margin: auto; 
@@ -196,7 +187,7 @@ body {
   background-color: rgb(49, 49, 49);
   font-family: Arial, Arial, Helvetica, sans-serif;
   text-align: center;
-}
+} */
 
 .header {
   display: flex; 
