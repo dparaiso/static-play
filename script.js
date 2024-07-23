@@ -1,42 +1,19 @@
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
+		gsap.set(".dot", {xPercent: -50, yPercent: -50});
+		
+		let tl = gsap.timeline({
+		  scrollTrigger: {
+		    trigger: ".block",
+		    start: "top top",
+		    end: "+=100%",
+		    scrub: 0.5,
+		    pin: ".dot"
+		  },
+		})
 
-/*------------------------------
-Register plugins
-------------------------------*/
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
-
-
-/*------------------------------
-Init ScrollSmoother
-------------------------------*/
-const scrollerSmoother = ScrollSmoother.create({
-  content: '#content',
-  wrapper: '#wrapper',
-  smooth: true,
-  effects: false,
-  normalizeScroll: true
+	tl.from(".dot", {
+	  scale: 0.1,
+	  repeat: 1,
+	  yoyo: true
 })
-
-const tl = gsap.timeline({
-  scrollTrigger: {
-      trigger: '.accordions',
-      pin: true,
-      start: 'top top',
-      end: 'bottom top',
-      scrub: 1,
-      ease: 'linear',
-    }
-})
-
-tl.to('.accordion .text', {
-  height: 0,
-  paddingBottom: 0,
-  opacity: 0,
-  stagger: .5,
-})
-tl.to('.accordion', {
-  marginBottom: -15,
-  stagger: .5,
-}, '<')
