@@ -6,35 +6,33 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <style>
-
-  .block {
-      width: 100%;
-      height: 50vh;
-    }
-    
-    .dot {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        width:150vmax;
-        height: 150vmax;
-        border-radius: 50%;
-        background-color: #E34248;
-        overflow-x: hidden;
-      }
+input[type='checkbox'] { display: none; } 
+.wrap-collabsible { margin: 1.2rem 0; } 
+.lbl-toggle { display: block; font-weight: bold; font-family: monospace; font-size: 1.2rem; text-transform: uppercase; text-align: center; padding: 1rem; color: #DDD; background: #0069ff; cursor: pointer; border-radius: 7px; transition: all 0.25s ease-out; } 
+.lbl-toggle:hover { color: #FFF; } 
+.lbl-toggle::before { content: ' '; display: inline-block; border-top: 5px solid transparent; border-bottom: 5px solid transparent; border-left: 5px solid currentColor; vertical-align: middle; margin-right: .7rem; transform: translateY(-2px); transition: transform .2s ease-out; } 
+.toggle:checked+.lbl-toggle::before { transform: rotate(90deg) translateX(-3px); } 
+.collapsible-content { max-height: 0px; overflow: hidden; transition: max-height .25s ease-in-out; } 
+.toggle:checked + .lbl-toggle + .collapsible-content { max-height: 350px; } 
+.toggle:checked+.lbl-toggle { border-bottom-right-radius: 0; border-bottom-left-radius: 0; } 
+.collapsible-content .content-inner { background: rgba(0, 105, 255, .2); border-bottom: 1px solid rgba(0, 105, 255, .45); border-bottom-left-radius: 7px; border-bottom-right-radius: 7px; padding: .5rem 1rem; } 
+.collapsible-content p { margin-bottom: 0; }
 
   </style>
 </head>
 <body>
-  
-<div class="block block--1">
-    
-  <div class="dot"></div>  
-  
-</div>
-<div class="block block--2"></div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-<script src="script.js"></script>
+  <div class="wrap-collabsible"> 
+    <input id="collapsible3" class="toggle" type="checkbox"> 
+    <label for="collapsible3" class="lbl-toggle" tabindex="0">With A11y</label>
+    <div class="collapsible-content"><div class="content-inner">
+    <p> Careen fluke jolly boat keel topgallant Admiral of the Black barkadeer sloop poop deck salmagundi. Avast red ensign parley clap of thunder no prey, no pay killick stern clipper execution dock splice the main brace. Grog blossom yardarm bilge water marooned cog wherry tackle aye Shiver me timbers come about.</p>
+    </div>
+    </div>
+  </div>
+  <script>
+     let myLabels = document.querySelectorAll('.lbl-toggle'); 
+     Array.from(myLabels).forEach(label => { label.addEventListener('keydown', e => { if (e.which === 32 || e.which === 13) { e.preventDefault(); label.click(); }; }); }); 
+
+  </script>
 </body>
 </html>

@@ -221,12 +221,12 @@ input[type="radio"]:checked {
 }
 
 .dot {
-    position: relative;
-    left: 50%;
-    top: 50%;
-    width:150vmax;
-    height: 150vmax;
-    border-radius: 50%;
-    background-color: #E34248;
-    overflow-x: hidden;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width:150vmax;
+  height: 150vmax;
+  border-radius: 50%;
+  background-color: #E34248;
+  overflow-x: hidden;
   }
