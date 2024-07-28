@@ -8,7 +8,16 @@
   <style>
 input[type='checkbox'] { display: none; } 
 .wrap-collabsible { margin: 1.2rem 0; } 
-.lbl-toggle { display: block; font-weight: bold; font-family: monospace; font-size: 1.2rem; text-transform: uppercase; text-align: center; padding: 1rem; color: #DDD; background: #0069ff; cursor: pointer; border-radius: 7px; transition: all 0.25s ease-out; } 
+.lbl-toggle { 
+  display: block; font-weight: bold; font-family: monospace; font-size: 1.2rem; text-transform: uppercase; text-align: center; padding: 1rem; color: #DDD; background: #0069ff; cursor: pointer; border-radius: 7px; transition: all 0.25s ease-out; } 
+
+.lbl-toggle:nth-of-type(1) {
+  background: green;
+}
+
+.lbl-toggle:nth-of-type(2) {
+  background: red;
+}
 .lbl-toggle:hover { color: #FFF; } 
 .lbl-toggle::before { content: ' '; display: inline-block; border-top: 5px solid transparent; border-bottom: 5px solid transparent; border-left: 5px solid currentColor; vertical-align: middle; margin-right: .7rem; transform: translateY(-2px); transition: transform .2s ease-out; } 
 .toggle:checked+.lbl-toggle::before { transform: rotate(90deg) translateX(-3px); } 
@@ -23,11 +32,19 @@ input[type='checkbox'] { display: none; }
 <body>
   <div class="wrap-collabsible"> 
     <input id="collapsible3" class="toggle" type="checkbox"> 
-    <label for="collapsible3" class="lbl-toggle" tabindex="0">With A11y</label>
+    <label for="collapsible3" class="lbl-toggle" tabindex="0">First</label>
     <div class="collapsible-content"><div class="content-inner">
     <p> Careen fluke jolly boat keel topgallant Admiral of the Black barkadeer sloop poop deck salmagundi. Avast red ensign parley clap of thunder no prey, no pay killick stern clipper execution dock splice the main brace. Grog blossom yardarm bilge water marooned cog wherry tackle aye Shiver me timbers come about.</p>
     </div>
     </div>
+    <!-- <div class="wrap-collabsible">  -->
+      <input id="collapsible4" class="toggle" type="checkbox"> 
+      <label for="collapsible4" class="lbl-toggle" tabindex="0">Second</label>
+      <div class="collapsible-content"><div class="content-inner">
+      <p> Careen fluke jolly boat keel topgallant Admiral of the Black barkadeer sloop poop deck salmagundi. Avast red ensign parley clap of thunder no prey, no pay killick stern clipper execution dock splice the main brace. Grog blossom yardarm bilge water marooned cog wherry tackle aye Shiver me timbers come about.</p>
+      </div>
+      </div>
+  <!-- </div> -->
   </div>
   <script>
      let myLabels = document.querySelectorAll('.lbl-toggle'); 
